@@ -18,7 +18,6 @@ public:
         bool need_to_init = false;
         auto file_descriptor = get_file_descriptor(shared_file_name, need_to_init);
 
-        // Маппим файл в память
         // Первый адрес - мьютекс, второй атрибуты, третий счетчики
         void *shared_memory_ptr = mmap(
                 nullptr,
